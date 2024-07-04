@@ -1,0 +1,211 @@
+[gd_scene load_steps=12 format=3 uid="uid://cq6pcftgncu2"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_p8f2p"]
+[ext_resource type="PackedScene" uid="uid://d02nh51sepotk" path="res://Objects/block_grass_large.tscn" id="2_1bunf"]
+[ext_resource type="PackedScene" uid="uid://dhl1rb01ggoqg" path="res://Objects/crate.tscn" id="2_s47oh"]
+[ext_resource type="PackedScene" uid="uid://j73cgrbqk7am" path="res://Objects/chest.tscn" id="4_32o5h"]
+[ext_resource type="PackedScene" uid="uid://cjqwwpvvx5i1x" path="res://Actors/character_body_3d.tscn" id="5_ki6u2"]
+[ext_resource type="Texture2D" uid="uid://c4j418x25n3c6" path="res://Objects/Captura de tela de 2024-05-09 21-02-18.png" id="5_nyt50"]
+[ext_resource type="Script" path="res://Scripts/Decal.gd" id="6_g4cju"]
+[ext_resource type="Script" path="res://Scripts/CameraControl.gd" id="6_yfnwn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qmpp1"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fdjr8"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j0s4b"]
+size = Vector3(2, 1, 0.25)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_p8f2p")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+
+[node name="Label" type="Label" parent="HUD"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.35
+offset_top = -184.0
+offset_right = 342.35
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(342.35, 184)
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0.760784, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "Viniciuis é gay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BigCenario" type="Node" parent="."]
+
+[node name="Centro" type="Node3D" parent="BigCenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="block-grass-large" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4)
+
+[node name="block-grass-large2" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -4)
+
+[node name="block-grass-large3" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -4)
+
+[node name="block-grass-large4" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
+
+[node name="block-grass-large6" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -3, 0, -2)
+
+[node name="block-grass-large8" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -3, 0, 1.19209e-07)
+
+[node name="block-grass-large7" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, -1.19209e-07)
+
+[node name="block-grass-large9" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, -2)
+
+[node name="block-grass-large10" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -1, 0, 2)
+
+[node name="block-grass-large11" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -3, 0, 2)
+
+[node name="block-grass-large12" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, 0, 2)
+
+[node name="block-grass-large13" parent="BigCenario/Centro" instance=ExtResource("2_1bunf")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 2)
+
+[node name="crate" parent="BigCenario/Centro" instance=ExtResource("2_s47oh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.70496, 1, -4)
+
+[node name="crate2" parent="BigCenario/Centro" instance=ExtResource("2_s47oh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -3)
+
+[node name="chest" parent="BigCenario/Centro" instance=ExtResource("4_32o5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -4.72921)
+
+[node name="chest2" parent="BigCenario/Centro" instance=ExtResource("4_32o5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -4.65282)
+
+[node name="chest3" parent="BigCenario/Centro" instance=ExtResource("4_32o5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49061, 1, -4.5686)
+
+[node name="chest4" parent="BigCenario/Centro" instance=ExtResource("4_32o5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6692, 1.00024, 1.56027)
+
+[node name="chest5" parent="BigCenario/Centro" instance=ExtResource("4_32o5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.74948, 0.999878, -0.325877)
+
+[node name="ground" type="StaticBody3D" parent="BigCenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0031786, 0.0120378, -0.0125034)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BigCenario/ground"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_qmpp1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BigCenario/ground"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_fdjr8")
+
+[node name="Decal" type="Decal" parent="BigCenario"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.525862, 3.3698, -3.24056)
+texture_albedo = ExtResource("5_nyt50")
+script = ExtResource("6_g4cju")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, 0, 5.57255, 0)
+light_color = Color(1, 1, 0.423529, 1)
+shadow_enabled = true
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("5_ki6u2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.889366, 1.50455, 2.91299)
+
+[node name="CameraControl" type="Node3D" parent="."]
+script = ExtResource("6_yfnwn")
+
+[node name="Camera3D1" type="Camera3D" parent="CameraControl"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 0)
+fov = 90.0
+
+[node name="Area3D1" type="Area3D" parent="CameraControl"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraControl/Area3D1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 1, -3)
+shape = SubResource("BoxShape3D_j0s4b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CameraControl/Area3D1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 1, -3)
+shape = SubResource("BoxShape3D_j0s4b")
+
+[node name="Camera3D2" type="Camera3D" parent="CameraControl"]
+transform = Transform3D(-4.37114e-08, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18557e-08, -3.78552e-08, 0, 4, 0)
+current = true
+fov = 90.0
+
+[node name="Area3D2" type="Area3D" parent="CameraControl"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraControl/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, -2)
+shape = SubResource("BoxShape3D_j0s4b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CameraControl/Area3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 2)
+shape = SubResource("BoxShape3D_j0s4b")
+
+[node name="Camera3D3" type="Camera3D" parent="CameraControl"]
+transform = Transform3D(-1, 4.37114e-08, -7.57104e-08, 0, 0.866025, 0.5, 8.74228e-08, 0.5, -0.866025, 0, 4, 0)
+current = true
+fov = 90.0
+
+[node name="Area3D3" type="Area3D" parent="CameraControl"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraControl/Area3D3"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 1, 3)
+shape = SubResource("BoxShape3D_j0s4b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CameraControl/Area3D3"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 1, 3)
+shape = SubResource("BoxShape3D_j0s4b")
+
+[node name="Camera3D4" type="Camera3D" parent="CameraControl"]
+transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, 0.016, 4, -0.009)
+fov = 90.0
+
+[node name="Area3D4" type="Area3D" parent="CameraControl"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CameraControl/Area3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -2)
+shape = SubResource("BoxShape3D_j0s4b")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CameraControl/Area3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 2)
+shape = SubResource("BoxShape3D_j0s4b")
+
+[connection signal="body_entered" from="CameraControl/Area3D1" to="CameraControl" method="_on_area_3d_1_body_entered"]
+[connection signal="body_entered" from="CameraControl/Area3D2" to="CameraControl" method="_on_area_3d_2_body_entered"]
+[connection signal="body_entered" from="CameraControl/Area3D3" to="CameraControl" method="_on_area_3d_3_body_entered"]
+[connection signal="body_entered" from="CameraControl/Area3D4" to="CameraControl" method="_on_area_3d_4_body_entered"]
