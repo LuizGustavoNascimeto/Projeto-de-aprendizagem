@@ -1,23 +1,19 @@
 extends Node3D
 
-func _on_area_3d_1_body_entered(body):
+var camArea
+func _ready():
+	camArea = get_tree().get_nodes_in_group("camArea")
+	for area:Area3D in camArea:
+		area.body_entered.connect(switchCam.bind(area.name))
+	
+func switchCam(body: Node3D, areaName):
 	if body == $"../CharacterBody3D":
+		var cam:Camera3D = findCam(areaName)
+		cam.current = true
 
-		$Camera3D1.current = true
-
-func _on_area_3d_2_body_entered(body):
-	if body == $"../CharacterBody3D":
-
-		$Camera3D2.current = true
-
-func _on_area_3d_3_body_entered(body):
-	if body == $"../CharacterBody3D":
-
-		$Camera3D3.current = true
-
-
-func _on_area_3d_4_body_entered(body):
-	if body == $"../CharacterBody3D":
-
-		$Camera3D4.current = true
+func findCam(areaName: String):
+	var numCam = areaName.get_slice("3D", 1)
+	var camName = "Camera3D" + numCam
+	return get_node(camName)
+		
 
