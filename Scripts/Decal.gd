@@ -7,8 +7,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	fadeDecal()
 	
 func fadeDecal():
 	self.position.y -= velocity
+	if self.position.y <-1:
+		queue_free()
+	

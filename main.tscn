@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cq6pcftgncu2"]
+[gd_scene load_steps=13 format=3 uid="uid://cq6pcftgncu2"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_p8f2p"]
 [ext_resource type="PackedScene" uid="uid://d02nh51sepotk" path="res://Objects/block_grass_large.tscn" id="2_1bunf"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c4j418x25n3c6" path="res://Objects/Captura de tela de 2024-05-09 21-02-18.png" id="5_nyt50"]
 [ext_resource type="Script" path="res://Scripts/Decal.gd" id="6_g4cju"]
 [ext_resource type="Script" path="res://Scripts/CameraControl.gd" id="6_yfnwn"]
+[ext_resource type="PackedScene" uid="uid://bdq6dc5yr4tff" path="res://Objects/arrows.tscn" id="9_iji2t"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qmpp1"]
 
@@ -204,3 +205,6 @@ shape = SubResource("BoxShape3D_j0s4b")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="CameraControl/Area3D4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 2)
 shape = SubResource("BoxShape3D_j0s4b")
+
+[node name="arrows2" parent="." instance=ExtResource("9_iji2t")]
+transform = Transform3D(-0.799423, 0, 0.600769, 0, 1, 0, -0.600769, 0, -0.799423, -3.29203, 0.999995, 3.51174)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdq6dc5yr4tff"]
+
+[ext_resource type="PackedScene" uid="uid://cic24dtw8okkv" path="res://Models/arrows.glb" id="1_6wo0p"]
+[ext_resource type="PackedScene" uid="uid://dwtxhik20tme8" path="res://Prefabs/Interactable.tscn" id="2_2gvho"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ia1q"]
+size = Vector3(0.5, 1, 0.2)
+
+[node name="arrows" instance=ExtResource("1_6wo0p")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_4ia1q")
+
+[node name="Area3D" parent="." index="2" instance=ExtResource("2_2gvho")]
+interact_label = "[E] Ler"
+interact_type = "text"
+interact_value = "Nao Sei"
