@@ -1,15 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://j73cgrbqk7am"]
+[gd_scene load_steps=5 format=3 uid="uid://j73cgrbqk7am"]
 
 [ext_resource type="PackedScene" uid="uid://cou0v8axmmgcp" path="res://Models/chest.glb" id="1_go5rd"]
+[ext_resource type="Script" path="res://Scripts/chest.gd" id="2_nlln4"]
+[ext_resource type="PackedScene" uid="uid://dwtxhik20tme8" path="res://Prefabs/Interactable.tscn" id="2_rbuo4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x8oqv"]
 
 [node name="chest" instance=ExtResource("1_go5rd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+script = ExtResource("2_nlln4")
 
 [node name="lid" parent="chest" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -3.7253e-09, 0.2, -0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 1.74393e-16, 0, -1.74393e-16, 1, -3.7253e-09, 0.2, -0.2)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)
 shape = SubResource("BoxShape3D_x8oqv")
+
+[node name="Area3D" parent="." index="3" instance=ExtResource("2_rbuo4")]
+interact_label = "[E] Abrir"
+interact_type = "animation"
+interact_value = "start"

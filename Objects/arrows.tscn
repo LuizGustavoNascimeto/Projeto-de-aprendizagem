@@ -14,5 +14,4 @@ shape = SubResource("BoxShape3D_4ia1q")
 
 [node name="Area3D" parent="." index="2" instance=ExtResource("2_2gvho")]
 interact_label = "[E] Ler"
-interact_type = "text"
-interact_value = "Nao Sei"
+interact_value = "Funciona"

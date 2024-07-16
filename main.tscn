@@ -59,6 +59,23 @@ text = "Viniciuis é gay"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="interactLabel" type="Label" parent="HUD"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -156.0
+offset_right = 22.0
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="BigCenario" type="Node" parent="."]
 
 [node name="Centro" type="Node3D" parent="BigCenario"]
@@ -101,7 +118,7 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1, 0, 
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 2)
 
 [node name="crate" parent="BigCenario/Centro" instance=ExtResource("2_s47oh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.70496, 1, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 1, -4.22921)
 
 [node name="crate2" parent="BigCenario/Centro" instance=ExtResource("2_s47oh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -3)
@@ -207,4 +224,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 2)
 shape = SubResource("BoxShape3D_j0s4b")
 
 [node name="arrows2" parent="." instance=ExtResource("9_iji2t")]
-transform = Transform3D(-0.799423, 0, 0.600769, 0, 1, 0, -0.600769, 0, -0.799423, -3.29203, 0.999995, 3.51174)
+transform = Transform3D(-0.799423, 0, 0.600769, 0, 1, 0, -0.600769, 0, -0.799423, -3.30328, 0.999995, 3.52085)
+
+[node name="block-grass-large" parent="." instance=ExtResource("2_1bunf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.24864, 0, -8.14241)
+
+[node name="block-grass-large2" parent="." instance=ExtResource("2_1bunf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.24864, 0, -10.2246)
