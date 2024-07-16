@@ -1,0 +1,13 @@
+res://Prefabs/Interactable.tscn
+res://Scripts/Interactable.gd
+res://main.tscn
+res://Actors/character_body_3d.tscn
+res://Objects/arrows.tscn
+res://Objects/chest.tscn
+res://Scripts/character_body_3d.gd
+res://Objects/UI/popup.tscn
+res://Prefabs/popup.tscn
+res://Scripts/main.gd
+res://Scripts/character_Interactable.gd
+res://Scripts/chest.gd
+res://Scripts/Decal.gd
